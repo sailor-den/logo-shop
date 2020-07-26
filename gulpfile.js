@@ -1,4 +1,4 @@
-var gulp         = require('gulp'),
+var 	gulp         = require('gulp'),
 		sass         = require('gulp-sass'),
 		browserSync  = require('browser-sync'),
 		concat       = require('gulp-concat'),
@@ -104,3 +104,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch'));
+

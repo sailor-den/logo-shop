@@ -1,44 +1,16 @@
-@import vars
-@import fonts
-@import libs
+//* Layout *//
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "base"
 
-::placeholder
-	color: #666
 
-::selection
-	background-color: $accent
-	color: #fff
-
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
-
-body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: 'Roboto', sans-serif
-	overflow-x: hidden
-	color: $text
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
-.wrapper
-	width: 100%
-	min-height: 100%
-	overflow: hidden
-
-.container
-	max-width: 1180px	
-	margin: 0 auto 
-	padding: 0px 20px
+//* Components *//
+@import "_components/header"
 
 
 
+
+
+
+@import "media" // Always at the end
