@@ -44,12 +44,18 @@ $gutter: $grid-gutter-width
 @include font('Roboto', italic, 400, '../fonts/Roboto-Italic.woff', '../fonts/Roboto-Italic.woff2')
 @include font('Roboto', normal, 400, '../fonts/Roboto-Regular.woff', '../fonts/Roboto-Regular.woff2')
 
+@include font('Play', normal, 700, '../fonts/playbold.woff', '../fonts/playbold.woff2')
+
 // For example mixin font
 
 @mixin bold 
 	font-family: Roboto, sans-serif
 	font-weight: bold
 	font-size: 25px
+
+@mixin Play-b 
+	font-family: Play, sans-serif
+	font-weight: bold
 
 
 // GENERAL DOCUMENT STYLES
@@ -78,4 +84,10 @@ body
 	overflow-x: hidden
 	color: $textcolor
 
+ul li 
+	list-style: none
 
+.container	
+    max-width: 1180px
+    margin: 0 auto 
+    padding: 0 20px

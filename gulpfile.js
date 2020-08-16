@@ -117,6 +117,7 @@ function images() {
 		})
 	)
 	.pipe(dest(paths.images.dest))
+	.pipe(src(paths.images.src))
 	.pipe(imagemin())
 	.pipe(dest(paths.images.dest))
 }
