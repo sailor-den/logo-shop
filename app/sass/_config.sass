@@ -10,6 +10,14 @@ $roboto: Roboto, sans-serif // Roboto Font Family
 $grid-gutter-width: 20px
 $gutter: $grid-gutter-width
 
+$minWidth: 320px 	
+$maxWidthContainer: 1180
+$maxWidth: 1920
+$md1: $maxWidthContainer + 12
+$md2: 991.98
+$md3: 767.98 
+$md4: 479.98
+
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
@@ -39,12 +47,13 @@ $gutter: $grid-gutter-width
 		src: local($fname), url($furl) format('woff'), url($furl_2) format('woff2')
 		    
 
-@include font('Roboto', normal, 700, '../fonts/Roboto-Bold.woff', '../fonts/Roboto-Bold.woff2')
-@include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.woff', '../fonts/Roboto-BoldItalic.woff2')
-@include font('Roboto', italic, 400, '../fonts/Roboto-Italic.woff', '../fonts/Roboto-Italic.woff2')
-@include font('Roboto', normal, 400, '../fonts/Roboto-Regular.woff', '../fonts/Roboto-Regular.woff2')
+@include font('Roboto', normal, 700, '../fonts/Roboto/Roboto-Bold.woff', '../fonts/Roboto/Roboto-Bold.woff2')
+@include font('Roboto', italic, 700, '../fonts/Roboto/Roboto-BoldItalic.woff', '../fonts/Roboto/Roboto-BoldItalic.woff2')
+@include font('Roboto', italic, 400, '../fonts/Roboto/Roboto-Italic.woff', '../fonts/Roboto/Roboto-Italic.woff2')
+@include font('Roboto', normal, 400, '../fonts/Roboto/Roboto-Regular.woff', '../fonts/Roboto/Roboto-Regular.woff2')
+@include font('Roboto', normal, 800, '../fonts/Roboto/Roboto-Black.woff', '../fonts/Roboto/Roboto-Black.woff2')
 
-@include font('Play', normal, 700, '../fonts/playbold.woff', '../fonts/playbold.woff2')
+@include font('Play', normal, 700, '../fonts/play/play-bold.woff', '../fonts/play/play-bold.woff2')
 
 // For example mixin font
 
@@ -74,20 +83,37 @@ input, textarea
 	&:required:valid
 		border-color: green
 
+html 
+	height: 100%
+
 body
+	height: 100%
 	font-family: $roboto
 	font-size: $fontsize
 	font-weight: normal
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.42
 	overflow-x: hidden
 	color: $textcolor
+
+img 
+	display: block
+	max-width: 100%
+	height: auto 
+
+ul 
+	margin: 0
+	padding: 0
 
 ul li 
 	list-style: none
 
+p 
+	padding: 0
+	margin: 0
+
 .container	
-    max-width: 1180px
+    max-width: $maxWidthContainer+px
     margin: 0 auto 
     padding: 0 20px
